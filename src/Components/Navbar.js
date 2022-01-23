@@ -5,7 +5,7 @@ import "../styles/navbar.css";
 export default function NavBar() {
   return (
     <nav className="navbar">
-      <Link className="home" to="/">
+      <Link className="home" to="/home">
         Home
       </Link>
       <Link className="campus" to="/Campus">

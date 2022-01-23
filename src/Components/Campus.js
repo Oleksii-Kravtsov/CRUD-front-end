@@ -4,6 +4,6 @@ import { Link } from "react-router-dom";
 export default function Campus() {
 
 	return(
-		<div>this is where the campuses will be displayed</div>
+		<div>this is where the campuses stuff is</div>
 		);
 }
