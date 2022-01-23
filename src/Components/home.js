@@ -7,7 +7,7 @@ export default function home() {
     <div className="homeBack">
       <div className="btn-holder" >
 
-     <button className="students-btn">Ahehehe</button> 
+     <button className="students-btn">Students</button> 
       <button className="campuses-btn">Campuses</button>
       </div>
     </div>
