@@ -1,23 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import "./styles/app.css"
+
+//importing components here
+import Navbar from "./Components/Navbar";
+import Home from "./Components/home";
+import Campus from "./Components/Campus";
+import Students from "./Components/Students";
+
 
 function App() {
+
+  const [students, setStudents] = useState([]);
+  const [campuses, setCampuses] = useState([]);
+    
+    useEffect(() => {
+    const fetchStudents = () => {
+      fetch (enter the url here to get from the database)
+        .then(res =>
+           res.json())
+        .then(data => {
+          setStudents(data.data);
+        })
+      }
+    const fetchCampuses = () => {
+      fetch (enter the url here to get from the database)
+        .then(res =>
+           res.json())
+        .then(data => {
+          setCampuses(data.data);
+        })
+      }
+      fetchStudent();
+      fetchCampuses();
+    },[]);
+
+
+
+
+
+
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path= "/" element={<Home />}/> 
+        <Route path= "/Campus" element={<Campus />}/>
+        <Route path= "/Students" element={<Students />}/>
+      </Routes>
     </div>
   );
 }
