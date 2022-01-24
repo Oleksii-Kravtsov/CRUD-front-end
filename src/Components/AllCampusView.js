@@ -14,15 +14,15 @@ export default function AllCampusView() {
 		// 	'Content-Type': 'application/json',
 		// 	}
 		// }
-		const fetchStudents = () => {
+		const fetchCampuses = () => {
 		  fetch ("https://back-end-ttp.herokuapp.com/campuses/")
 			.then(res =>{
 			   return res.json()})
 			.then(data => {
-			  console.log(data)
+			  setCampuses(data)
 			})
 		  }
-		return fetchStudents()
+		return fetchCampuses()
 		})
 
 
@@ -38,7 +38,7 @@ export default function AllCampusView() {
 		<div>
 		    <button className="addCampus-btn" onClick= {() => navigate('/CampusForm')}> Add Campus</button> 
 			{
-			campusData && campusData.map(singleCampus => <SingleCampus key={singleCampus.id} props={singleCampus} />)
+			campus && campus.map(singleCampus => <SingleCampus key={singleCampus.id} props={singleCampus} />)
 			}
 		</div>
 		</>
