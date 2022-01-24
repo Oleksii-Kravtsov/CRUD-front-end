@@ -1,0 +1,27 @@
+.CampusContainer{
+ text-align: center;
+
+}
+.displayCampus{
+ display: flex;
+ flex: wrap;
+ padding: 10px;
+
+}
+.campusCard{
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  width: 200px;
+  background-color: #EEEEEE;
+
+}
+
+
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border-width: 1px;
+  margin: 10px;
+}

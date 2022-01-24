@@ -1,17 +1,21 @@
-  .btn-holder{
-    margin: auto;
-  }
 
-  button{
+
+button{
     border-radius: 12px;
+    border-width: 1px;
     padding: 5px;
     font-size: larger; 
-    margin: 10px; 
-    transition-duration: .4s;
-    background-color: grey;
-  }
+    margin: 20px; 
+    transition-duration: .3s;
+    background-color: #E2E2E2;
+
+}
 
 
-  button:hover{
+button:hover{
     background-color: white;
-  }
+}
+
+.homecontainer {
+  text-align: center;
+}

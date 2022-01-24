@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import SingleCampus from "./SingleCampus";
 import {Navigate, useNavigate} from "react-router-dom";
 import campusData from "../DummyDATA/campusData.json";
+import "../styles/campus.css";
 
 export default function AllCampusView() {
 	const [campus, setCampuses] = useState([]);
@@ -30,17 +31,18 @@ export default function AllCampusView() {
 	const navigate = useNavigate();
 
 	return(
-		<>
+		<div className="CampusContainer">
 		<div>
-			<h1>This is where the campuses will be displayed</h1>
+			<h1>Welcome to the Campus Area, Take a look at all the campuses!</h1>
 
 		</div>
-		<div>
-		    <button className="addCampus-btn" onClick= {() => navigate('/CampusForm')}> Add Campus</button> 
+		
+		    <button className="addCampus" onClick= {() => navigate('/CampusForm')}> Add Campus</button> 
+		    <div className="displayCampus">
 			{
 			campusData && campusData.map(singleCampus => <SingleCampus key={singleCampus.id} props={singleCampus} />)
 			}
 		</div>
-		</>
+		</div>
 		);
 }

@@ -1,7 +1,7 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import campusData from "../DummyDATA/campusData.json";
-
+import "../styles/campus.css";
 
 export default function Campus({props}) {
 
@@ -12,10 +12,14 @@ export default function Campus({props}) {
 	console.log(campusInfo)
 
 	return(
-		<div>
-			<div>this is where the campuses stuff is</div>
-			<h3> Name: {campusInfo[0].name}</h3>
+		<div className="container">
+			<h1>Campus</h1>
+			<h2> Name: {campusInfo[0].name}</h2>
 			<h3> Description: {campusInfo[0].description}</h3>
+			
+			<h3>To return click me!</h3>		
+			 <Link to="/AllCampusView"> <button className="campuses">Campuses</button> </Link> 
+			
 		</div>
 		);
 }

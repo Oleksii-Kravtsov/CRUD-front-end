@@ -3,6 +3,8 @@ import SingleStudent from "./SingleStudent";
 import {Navigate, useNavigate} from "react-router-dom";
 import data from "../DummyDATA/data.json"
 import axios from "react"
+import "../styles/students.css";
+
 
 export default function AllStudentsView() {
 
@@ -41,16 +43,20 @@ export default function AllStudentsView() {
 
 		const navigate = useNavigate()
 	return(
-		<>
-		<h1>this is where the view will be displayed</h1>
-		<div>
-		    <button className="addStudents-btn" onClick= {() => navigate('/StudentForm')}> Add Student</button> 
+		<div >
+		<div className="StudentContainer">
+		<h1>Here are all the Students!</h1>
+		
+		    <button className="addStudents" onClick= {() => navigate('/StudentForm')}> Add Student</button> 
+		    </div>
+		    <div className="displayStudents">
+
 			{
 			students && students.map(singleStudent => <SingleStudent key={singleStudent.id}  props={singleStudent} />)
 			}
 			
 		</div>
-		</>
+		</div>
 	 		
 		);
 }

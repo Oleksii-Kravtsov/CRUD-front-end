@@ -5,6 +5,7 @@ import "../styles/navbar.css";
 export default function NavBar() {
   return (
     <nav className="navbar">
+      <div className="Logo"> CRUD </div>
       <Link className="home" to="/Home">
         Home
       </Link>

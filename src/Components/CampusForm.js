@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Axios from 'axios'
 import campusData from "../DummyDATA/campusData.json"
-
+import "../styles/campus.css";
 
 export default function CampusForm() {
 
@@ -18,6 +18,7 @@ export default function CampusForm() {
 		console.log("Campus address", address)
 	
 		console.log("data before push ", campusData)
+
 		campusData.push({name, description,address})
 	
 		console.log(campusData)
@@ -33,23 +34,25 @@ export default function CampusForm() {
 	  }
 
 	return(
-		<div>
-      <h1>Add a Campus</h1>
+		<div className="container">
+      <h1>Add a New Campus</h1>
+      <div>
       <form onSubmit={SubmitHandler}>
+        <label className="labelform">
+          Name:<br/>
+          <input type="text" name="name" value={name} onChange={(e) =>setName(e.target.value)} className="nameform"/>
+        </label><br/>
         <label>
-          Name:
-          <input type="text" name="name" value={name} onChange={(e) =>setName(e.target.value)}/>
-        </label>
-        <label>
-          Description:
+          Description:<br/>
           <input type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}/>
-        </label>
+        </label><br/>
 		<label>
-          Address:
+          Address:<br/>
           <input type="text" name="address" value={address} onChange={(e) => setAddress(e.target.value)}/>
-        </label>
+        </label><br/>
         <input type="submit" value="Submit" />
       </form>
+      </div>
     </div>
 	);
 }

@@ -14,7 +14,7 @@ export default function Students({props}) {
 
 	return(
 		<div>
-			<div> This is my student info</div>
+			<div> This is the student info</div>
 			<h3>Name: {studentInfo[0].names} </h3>
 			<h3>Age: {studentInfo[0].age}</h3>
 		</div>

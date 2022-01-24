@@ -1,0 +1,19 @@
+.StudentContainer{
+	text-align: center;
+}
+
+.studentCard{
+  border-radius: 12px;
+  padding: 20px;
+  margin: 15px;
+  width: 200px;
+  background-color: #EEEEEE;
+
+}
+
+.displayStudents{
+ display: flex;
+ flex: wrap;
+ padding: 10px;
+
+}
