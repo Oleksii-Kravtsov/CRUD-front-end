@@ -16,22 +16,24 @@ function App() {
     
     useEffect(() => {
     const fetchStudents = () => {
-      fetch (enter the url here to get from the database)
+      fetch ("https://back-end-ttp.herokuapp.com/students")
         .then(res =>
            res.json())
         .then(data => {
-          setStudents(data.data);
+          setStudents(data);
         })
       }
     const fetchCampuses = () => {
-      fetch (enter the url here to get from the database)
+      fetch ("https://back-end-ttp.herokuapp.com/students")
         .then(res =>
            res.json())
         .then(data => {
-          setCampuses(data.data);
+          console.log(data)
+          setCampuses(data);
+
         })
       }
-      fetchStudent();
+      fetchStudents();
       fetchCampuses();
     },[]);
 
