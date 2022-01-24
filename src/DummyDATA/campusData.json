@@ -1,0 +1,6 @@
+[
+    {"id": 1, "name": "Brooklyn", "description": "Broklyn college", "address": "123 Main st"},
+    {"id": 2, "name":"Queens" , "description": "Broklyn college" , "adress": "234 23rd street"}, 
+    {"id": 3, "name": "Manhattan", "description": "Manhttan college", "address": "45 issa street"},
+    {"id": 4, "name": "Bronx", "description": "Bronx College", "address": "65 umra road"}
+]
