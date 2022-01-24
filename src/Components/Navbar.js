@@ -5,13 +5,13 @@ import "../styles/navbar.css";
 export default function NavBar() {
   return (
     <nav className="navbar">
-      <Link className="home" to="/home">
+      <Link className="home" to="/Home">
         Home
       </Link>
-      <Link className="campus" to="/Campus">
+      <Link className="Allcampus" to="/AllCampusView">
         Campuses
       </Link>
-      <Link className="student" to="/Students">
+      <Link className="Allstudents" to="/AllStudentsView">
         Students
       </Link>
     </nav>
