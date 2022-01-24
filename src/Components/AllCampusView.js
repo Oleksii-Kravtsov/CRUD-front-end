@@ -15,7 +15,7 @@ export default function AllCampusView() {
 		// 	}
 		// }
 		const fetchStudents = () => {
-		  fetch ("https://back-end-ttp.herokuapp.com/students/")
+		  fetch ("https://back-end-ttp.herokuapp.com/campuses/")
 			.then(res =>{
 			   return res.json()})
 			.then(data => {
