@@ -18,9 +18,9 @@ export default function SingleCampus({props}) {
 	return(
 		<div className="campusCard">
 		<ul>
-		<Link to={`/Campus/${props.id}`} ><li>{props.name}</li></Link>
+		<Link to={`/Campus/${props.id}`} ><li>{props.name} </li></Link> <li>{props.address}</li>
 		<li>{props.description}</li>
-		<li>{props.address}</li>
+		
 		<button onClick={() => DeleteHandler(props.id)}> Delete</button>
 		</ul>
 		</div>
